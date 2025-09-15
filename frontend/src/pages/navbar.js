@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
+import { NavLink } from "react-router-dom";
 
 function Navbar({ onSaveSettings }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,12 @@ function Navbar({ onSaveSettings }) {
   return (
     <nav className="navbar">
       {/* Logo */}
-      <div className="navbar-logo">My Learn Buddy</div>
+      <div className="navbar-logo">
+         <NavLink to="/" style={{ textDecoration: "none", color: "#1e3a8a" }}>
+         Learn Buddy
+         </NavLink>
+        
+      </div>
 
       {/* Hamburger */}
       <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -56,7 +62,7 @@ function Navbar({ onSaveSettings }) {
           </label>
         </div>
 
-        <button className="save-btn" onClick={handleSave}>
+        <button className="save-btn" onClick={" "}>
           Save
         </button>
       </div>
