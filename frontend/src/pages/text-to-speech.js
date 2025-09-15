@@ -18,10 +18,10 @@ function TextToSpeechPage() {
     try {
       console.log("Sending request with text:", text);
       
-      // Try different approaches to send the data
+      
       let response;
       
-      // First try: FormData
+      
       try {
         const formData = new FormData();
         formData.append('text', text);

@@ -1,12 +1,11 @@
-/* Navbar wrapper */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 32px;
-  background-color: #ffffff; /* professional clean white */
-  font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 14px 32px;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -14,77 +13,75 @@
 
 /* Logo */
 .navbar-logo {
-  font-size: 28px;
-  font-weight: 800;
-  cursor: pointer;
-  letter-spacing: 1px;
-  padding-left: 50px;
-  color: #1e3a8a; /* deep professional blue */
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e3a8a;
 }
 
-/* Right side links */
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  padding-right: 50px;
-}
-
-.navbar-links {
-  display: flex;
-  gap: 24px;
-}
-
-.nav-link {
-  color: #f1f5f9;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 8px 14px;
-  border-radius: 8px;
-}
-
-/* Hamburger menu */
+/* Hamburger */
 .hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   cursor: pointer;
-  gap: 6px;
+  gap: 5px;
 }
 
 .hamburger span {
-  width: 26px;
+  width: 22px;
   height: 3px;
-  background: white;
+  background: #1e3a8a;
   border-radius: 2px;
-  transition: 0.3s;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    background: #1e40af;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    padding: 16px;
-    border-radius: 8px 0 0 8px;
-    box-shadow: -4px 6px 12px rgba(0, 0, 0, 0.2);
-  }
+/* Settings Panel */
+.settings-panel {
+  position: fixed;
+  top: 60px;
+  right: -260px;
+  width: 240px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: right 0.3s ease;
+  z-index: 1500;
+}
 
-  .navbar-links.show {
-    display: flex;
-  }
+.settings-panel.open {
+  right: 20px;
+}
 
-  .hamburger {
-    display: flex;
-  }
+.settings-panel h3 {
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+  color: #0f172a;
+}
 
-  .nav-link {
-    font-size: 16px;
-    padding: 10px;
-  }
+.setting-item {
+  margin-bottom: 16px;
+}
+
+.setting-item label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+select, input[type="checkbox"] {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  width: 100%;
+}
+
+.save-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
 }
